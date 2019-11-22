@@ -1,0 +1,89 @@
+/* 1.1 父子选择器/派生选择器 */
+div span{
+    background-color: red;
+}
+
+div strong em {
+    background-color: green;
+}
+
+.wrap .box em{
+    background-color: pink;
+}
+
+div em{
+    background-color: blue;
+}
+/* 1.2 直接子元素选择器 */
+div > em {
+    background-color:orange;
+}
+
+/* 1.4 并列选择器 */
+div.demo{
+    background-color: palevioletred;
+}
+
+/* div[class="demo"]{
+    background-color: palevioletred;
+} */
+
+/* 权重： 100 + 1 */
+#idDiv p{
+     background-color: red; 
+}
+/* 100 + 1 + 10 */
+#idDiv p.classP{
+     background-color:pink !important; 
+}
+/* 权重： 10 + 10 */
+.classDiv .classP{
+    background-color: green ;
+}
+/* 权重 1 + 10 + 100 */
+div .classP#idP{
+    background-color: purple ;
+}
+
+/* 1.6 分组选择器 */
+em,
+strong,
+p{
+    background-color: salmon;
+}
+
+/* 1.7 字体样式 */
+.font{
+    font-size: 50px;
+    font-weight: bold;  /* normal正常(相当于400)、bold 粗体(相当于700) 、bolder 特粗体 、lighter 粗体 | integer(100~900)*/
+    font-style: normal;
+    font-family:cursive ; /* Arial */
+    width:0;
+    height: 0;
+    border: 100px solid black;
+    /* border-width: 1px;
+       border-style: solid;  dashed dotted 
+       border-color: blue;*/
+    border-left-color: red;  
+    border-top-color: green;
+    border-right-color: blueviolet;
+
+   
+    color: rgb(255,255,255);
+    /* 
+     字体颜色写法：
+     1.土鳖式：（纯英文单词） transparent-透明色
+     2.颜色代码：#ff4400
+     3.颜色函数:rgb(255,255,255)  0-255
+
+     光学三原色：红 绿 蓝
+       r       g        b
+     00-ff   00-ff    00-ff
+
+     若每两位重复可简写 如： #ff4400 等价于 #f40
+    */
+
+   
+    
+    
+}

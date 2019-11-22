@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>文字溢出 背景图片处理 css升华篇</title> 
+        <link rel="stylesheet" type="text/css" href="css3.css">
+    </head>
+    <body>
+
+
+        <!-- 
+            8.文字对齐 vertical-align
+              特殊点：文档上的文字与设置成行级块元素的span :
+                      span里有内容：   文档上文字与span里的文字底对齐
+                      span里没有内容： 文档上文字与span底对齐
+         -->
+
+        <span class="test-span">你好呀</span> 嗯嗯那
+        <!-- 发现文字与设置成行级块元素的有内容的span的内容文字是对齐的 -->
+        <br>
+        <span class="test-span"></span> 嗯嗯那
+        <!-- 发现设置成行级块元素的无内容span与文字也是底对齐的 -->
+        <br>
+        <img src="test.png" alt=""> 哈哈哈
+        <br>
+        <!-- 发现行级块元素img和文字是底对齐的 -->
+        
+        <div>
+            我在测试文本，<span class="test-text">哎呦呦</span>
+        </div>
+        <!-- 发现块级元素div和行级元素span的文字是底对齐的 -->
+
+
+
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+        <!-- 
+            7.行级元素转行级块元素方法：
+            7.1 设置 position:absolute 或者 float:right/left 时， 内部被转化为display:inline-block
+            7.2 设置display:inline-block
+         -->
+       <span class="test-span">121313</span>
+
+       <br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- 
+            6.文本类属性标签空隙
+             解决方法：
+                    6.1 margin-left:-6px; 强制缩进（若上传服务器压缩html，压缩时会去掉空格，这时线上展示会缩进过多，不推荐）
+                    6.2 html中去掉空格
+         -->
+         <img src="test.png" alt="测试" class="inline-block">
+         <img src="test.png" alt="测试" class="inline-block">
+         <img src="test.png" alt="测试" class="inline-block">
+         <img src="test.png" alt="测试" class="inline-block">
+
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- 
+            5.网页两边留白
+             父子元素都是块级元素才可以，将内容显示区域宽度不变，两边界根据屏幕自动留白
+         -->
+         <div class="wrapper">
+             <div class="content">
+             </div>
+         </div>
+
+
+
+       <br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- 
+            4.特殊点
+                a. 行级元素只能嵌套行级元素,
+                   块级元素可以嵌套任何元素，但是p标签（块级元素）不能套块级元素，否则会被劈成两半，即：
+                    <p>
+                        <div></div>
+                    </p>
+                    会变成：
+                    <p></p>
+                    <div></div>
+                    <p></p>
+
+                b. a标签不能套a标签
+        -->
+        <!-- 
+            3.图片代替文字
+                bg-img :https://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png
+                img
+
+                3.1 加字体链接，然后用 首行缩进 不换行 将字体溢出到图片之外，隐藏溢出文字
+                3.2 背景图片加到padding上，文字显示在内容区域，隐藏文字
+            -->
+            <a href="http://www.taobao.com" class="taobao2">淘宝网</a>
+           <br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <a href="http://www.taobao.com" class="taobao1">淘宝网</a>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- 
+            2.背景图片
+                background-image: url(test.png);
+                background-size: 100px 200px;
+                background-repeat: no-repeat;
+
+                background-position: center center;
+                等价于
+                background-position: 50% 50%;
+
+         -->
+         <div class="bg-img"></div>
+
+
+
+
+
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- 
+            1.文字溢出 打点展示
+                单行文本：
+                        white-space: nowrap;      //设置不换行
+                        overflow: hidden;         //文字溢出时隐藏
+                        text-overflow: ellipsis;  //溢出文字展示
+                多行文本：
+                        一般前端只做截断。
+                        （若需打点的话是前端把行宽和行高传给后台，由后台计算好打点--文字和字符的所占像素不一致，所以后端只是估算的打点位置）      
+                      
+        -->
+
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <p class="one-line">法国选举第一轮投票结束,
+            马克龙所在党领先夺冠，恭喜马克龙及其法国选举第一轮投票结束,
+            马克龙所在党领先夺冠，恭喜马克龙及其
+        </p>
+
+        
+    </body>
+</html>

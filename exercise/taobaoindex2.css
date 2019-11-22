@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+/* 网站导航 */
+.site-nav{
+    height: 35px;
+    background-color: pink;   /* #f5f5f5 */
+}
+
+/* 顶部检索 */
+.site-top{
+    height: 97px;
+    padding-top: 24px;
+    background-color: blueviolet;  /* #fff */
+}
+
+/* 横向菜单 */
+.menu{
+    height: 30px;
+    line-height: 30px;
+    background-color: mediumvioletred;
+    margin-right: -18px;
+}
+
+/* 内容区域 */
+.warpper{
+    height: 522px;
+    background-color: lightgreen;
+}
+
+.warpper .content{
+    margin: 0 auto;
+    height: 522px;
+    width: 1190px;
+    background-color: blue;
+} 
+.warpper .content .left{
+    width: 900px;
+    height: 522px;
+    background-color: lightsalmon;
+}
+
+.left .service{
+    /* float: left;
+    top: 0;
+    left: 0; */
+    width: 188px;
+    height: 32px;
+    background-color: mediumorchid;
+    border: 1px solid #ff5000;
+    border-top: none;
+    padding: 5px 0 3px 0;
+}
+.left .left-set .row-img{
+    position: absolute;
+    left: 188px;
+    top: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    width: 520px;
+    height: 512px;
+    background-color: midnightblue;
+}
+
+ .row-img .row-img-set{
+    position: relative;
+    width: 520px;
+    height: 512px;
+    background-color: royalblue;
+}
+
+.row-img .row-img-set .rotate-img{
+    width: 100%;
+    height: 280px;
+    background-color: seagreen;
+}
+
+.row-img .row-img-set .tmall{
+    position: absolute;
+    left: 0;
+    top: 280px;
+    width: 100%;
+    height: 230px;
+    background-color: tomato;
+}
+
+.row-img .row-img-set .tmall .tmall-set{
+    position: relative;
+    width: 100%;
+    height: 230px;
+    background-color: yellow;
+}
+
+.tmall .tmall-set .tmall-hd{
+    width: 520px;
+    height: 32px;
+    padding: 11px 0 0;
+    background-color: teal;
+}
+
+.left .left-set .col-img{
+    position: relative;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+    width: 160px;
+    height: 512px;
+    background-color: olivedrab;
+}
+
+
+.left .left-set .col-img .up-img{
+    width: 160px;
+    height: 280px;
+    background-color: violet;
+}
+
+.left .left-set .col-img .down-area{
+    position: relative;
+    width: 160px;
+    height: 230px;
+    background-color: tomato;
+}
+.left .left-set .col-img .down-area .down-img{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 160px;
+    height: 200px;
+    background-color: black;
+}
+
+.warpper .content .right{
+    float: right;
+    width: 290px;
+    height: 522px;
+    background-color: lightsalmon;
+}
+.right .member{
+    width: 290px;
+    height: 132px;
+    padding: 3px 0 10px 0;
+    background-color: yellow;
+
+}
+.right .tips{
+    width: 208px;
+    height: 26px;
+    padding: 0 0 0 82px;
+    background-color: orange;
+}
+.right .notices{
+    width: 290px;
+    height: 98px;
+    padding: 10px 0 0;
+    background-color: green;
+
+}
+.right .options{
+    width: 290px;
+    height: 155px;
+    background-color: plum;
+}
+.right .app{
+    width: 290px;
+    height: 76px;
+    background-color: salmon;
+}
+
+
+
+

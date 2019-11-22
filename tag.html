@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>html tag</title>
+
+    <style>
+        .test ul {
+            list-style: none;
+        }
+
+        .test li {
+            float: left;
+            margin: 0 5px;
+            color: #f40;
+            font-size: 16px;
+            padding: 0 5px;
+        }
+
+        .test li:hover {
+            background-color: #f40;
+            border-radius: 15px;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- select -->
+    <form>
+    <h1>Province</h1>
+    <select name="province">
+        <option value="shanxi">陕西</option>
+        <option value="hebei">河北</option>
+        <option value="hunan">湖南</option>
+    </select>
+    <input type="submit" >
+</form>
+    <!-- 
+           from标签
+
+        -->
+    <form method="get" action=""> 
+        
+        <p>
+            chooose your sex :
+            <input type="radio" name="sex" value="male" checked="checked">male
+            <input type="radio" name="sex" value="female" > female
+        </p>
+       <p> <input type="submit"></p>
+
+
+       <!-- <p>username:<input type="text" name="username" value="请输入用户名" style="color:#999" onfocus="if(this.value='请输入用户名'){this.value='';this.style.color='#424242'}"
+        onblur="if(this.value==''){this.value='请输入用户名';this.style.color='#999'}"/></p>
+        <p>password:<input type="password" name="pwd" /></p>
+        <p>
+            可以选择的人：
+        1. 张三 <input  type="radio" name="star" value="zhangsan">
+        2. 李斯 <input  type="radio" name="star" value="lisi">
+        3. 王五 <input  type="radio" name="star" value="wangwu">
+        </p> -->
+    </form>
+
+
+    <!-- 
+        a标签： 
+            1.锚点作用 ：回到顶部；点击目录定位到对应内容 ；
+            2.超链接
+            3.打电话、发邮件
+            4.协议限定符
+
+   -->
+    </p>
+    </p>
+    <a href="tel:18729315281"></a>
+    <a href="mailto:932126394@qq.com"></a>
+    <a href="javascript:console.log('hello')">点我</a>
+    <!-- 
+            无序列表的应用：导航 菜单
+         -->
+    <div class="test">
+        <ul>
+            <li>天猫</li>
+            <li>聚划算</li>
+            <li>天猫超市</li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- 
+          3.无序列表
+          type disc(默认值) square circle 
+        -->
+    <ul type="square">
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>橘子</li>
+    </ul>
+    <!-- 
+           2.有序列表：
+            type 用于指定有序列表的序号类型，主要分为五种：1 a A i I  注：当英文字母超过26时，以AA AB AC开始计数
+            reversed 倒序排列 
+            start 指定开始序号
+         -->
+    <ol type="1" reversed="reversed">
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>橘子</li>
+    </ol>
+
+    <!-- 
+           1. 简单标签
+        -->
+    <del>￥50</del>
+    <address></address>
+    <strong></strong>
+    <em></em>
+    <div></div>
+    <span></span>
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <br>
+    <hr>
+</body>
+</html>

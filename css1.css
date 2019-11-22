@@ -1,0 +1,28 @@
+/* 1.1ID选择器 */
+#only{
+    background-color: red;
+}
+/* 1.2 class选择器 */
+.demo{
+    background-color: green;
+
+}
+.demo1{
+    font-size: 16px;
+    color:#f40;
+}
+/* 1.3 标签选择器 */
+div{
+    background-color: black;
+    color:red;
+    font-weight:bold;
+}
+/* 1.4通配符选择器 */
+/* *{
+    background-color: green;
+} */
+
+/* 1.5 属性选择器 */
+[id="test"]{
+    background-color :pink;
+}

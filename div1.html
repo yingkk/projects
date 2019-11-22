@@ -1,0 +1,167 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>盒模型 层模型</title>
+    <link rel="stylesheet" type="text/css" href="div1.css">
+</head>
+<body>
+    
+    <!-- 
+        7.position 
+
+        7.1 absolute:
+           a.脱离原来的位置进行定位
+                left/right/:盒子左边线或者右边线距离屏幕边界的像素
+                top/bottom:盒子上边线或者下边线距离屏幕边界的像素
+           
+            注：body有个默认的margin:8px;
+
+           b.层模型：
+             当一个元素成为绝对定位元素的时候，就会脱离原来层，跑到上面的层。  
+           
+           c.absolute相对于最近的有定位(relative)的父级进行定位，如果没有相当于文档进行定位
+
+        7.2 relative:
+           a.保留原来位置定位 
+           b.相对于自己原来的位置进行定位
+
+        总结：用relative作为参照物，用absolute进行定位
+
+        7.3 fixed： 固定定位
+                    如侧边广告定位，居中定位
+                 
+   -->
+   <!-- 7.1 absolute -->
+    <div class="wrap"></div>
+
+    <br><br><br>
+    <!-- 7.1 层模型 -->
+    <div class="red"></div>
+    <div class="green"></div>
+    <br><br><br>
+    <!-- 7.2 relative -->
+
+    <div class="relative"></div>
+    <div class="relative1"></div>
+
+    <!-- 7.3 absolute相对于最近的有定位的父级进行定位，如果没有相当于文档进行定位 -->
+    <div class="grandpa">
+        <div class="father">
+            <div class="child"></div>
+        </div>
+    </div>
+
+
+    <br><br><br>
+    <!-- 7.4 fixed 左侧广告定位 -->
+    <div class="fixedleft">生日股份个地方官</div>
+
+
+    <br><br><br>
+    <!-- 7.4 fixed 居中定位 -->
+    <div class="fixedmiddle">测试居中定位</div>
+
+
+
+   <br></br></br>
+    <!-- 6.盒子模型 -->
+    <!-- 
+        盒子的组成部分：
+        盒子壁    border
+        内边距    padding
+        盒子内容   width_height
+        外边距+边框+内边距+内容  margin + border + padding + (content=width+height)
+     -->
+   
+     <!-- 远视图 -->
+    <div class="div">
+        <div class="div1">
+            <div class="div2">
+                    <div class="div3">
+                        <div class="div4">
+                        </div>
+                
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="wrapper">
+        <div class="content"></div>
+    </div>
+
+    <br><br>
+     <div class="box">吃吃吃</div>
+
+
+
+
+
+
+
+
+
+    <br><br><br><br><br><br>
+    <!-- 5.选择器的应用 -->
+    <!-- 5.1 标签选择器：用于初始化标签 -->
+   <em>34344</em>
+   <a>rgfdgfdg</a>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+   <!-- 5.2 通配符选择器：初始化所有标签 --> 
+   <p>24</p>
+   <h1>34</h1>
+
+    <!-- 
+        4.行级元素和块级元素 
+            4.1.行级/内联元素 inline
+                内容决定元素所占位置
+                不可以通过css改变宽高
+            span strong em a del
+
+            4.2.块级元素 block
+                独占一行
+                可以通过css改变宽高
+            div p ul ol li form address 
+
+            4.3.行级块元素 inline-block
+                内容决定大小
+                可以通过css改变宽高
+            img    
+            另：img 一般只设置高或者宽，另一个会等比缩放。
+    -->
+
+    <!--
+        注： 以下例子会发现：行级块元素和元素中间有空隙：
+            1.凡是带有inline(包括inline和inline-block)的元素都有文字特性，有文字特性（文字特性：比如汉字或英文字母【有空格】会被认定为是一个字或单词就会进行文本分割）就会被分割。(中间的空隙是文本分隔符)
+            2.打包文件压缩会去空格，压缩
+     -->
+    <img src="test.png">
+    <img src="test.png">
+    <img src="test.png">
+    <img src="test.png">
+
+    <br><br><br><br>
+
+    <!-- 3.伪类选择器 -->
+    <a  style="text-decoration: none;" class="testa" href="www.taobao.com"> www.taobao.com</a>
+    <br><br><br><br>
+
+    <!-- 2.文本装饰 -->
+    <del class ="del">原价50元</del>
+    <span class="span">原价50元</span>
+    <span class="a">www.baidu.com</span>
+    <br><br><br><br><br>
+
+    <!-- 1.文本样式 -->
+     <div class="demo">
+         新浪网新闻中心是新浪网最重要的频道之一,24小时滚动报道国内、国际及社会新啦啦啦啦闻。
+         每日编发新闻数以万计。
+     </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    width: 500px;
+    height: 500px;
+    margin:  0 auto;
+    border: 1px solid black;    
+    overflow: hidden;   
+}
+
+ul{
+    width: 2000px;
+    height: 500px;
+    animation: lunbo 20s infinite linear;
+    display: flex;
+    /* animation: lunbo- 10s steps(1, end) infinite; */
+}
+ul li img{
+    width: 500px;
+    height: 500px;
+}
+div:hover ul{
+    animation-play-state: paused;
+}
+
+@keyframes lunbo{
+    0%{
+        margin-left: 0px;
+    }
+    25%{
+        margin-left: -500px;
+    }
+    50%{
+        margin-left: -1000px;
+    }
+    75%{
+        margin-left: -1500px;
+    }
+    100%{
+        margin-left: 0;
+    }
+}

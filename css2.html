@@ -1,0 +1,54 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+     <title>css复杂选择器 </title>
+     <link rel="stylesheet" href="css2.css">
+ </head>
+ <body>
+   <!-- 1.1 父子选择器 -->
+    <div>
+       <span>2434</span>
+    </div>
+    <span>4656</span>
+
+    <div class="wrap">
+        <strong class="box">
+            <em>345435</em>
+        </strong>
+    </div>
+    <em>5654657</em>
+
+    <!-- 1.2 直接子元素选择器 -->
+    <div>
+        <em>2323</em>
+        <strong>
+            <em>6776878</em>
+        </strong>
+    </div>
+
+    <!-- 1.3 父子选择器遍历方式：自右向左 -->
+
+    <!-- 1.4 并列选择器-->
+      <div>11123</div>
+      <div class="demo">22223</div>
+      <p class="demo">33333333335</p>
+
+    <!-- 1.5 并列选择器的优先级 ：按权重计算 -->
+      <div class="classDiv" id="idDiv">
+        <P  class="classP" id="idP">999999</classP>
+      </div>
+
+      <!-- 1.6 分组选择器 -->
+      <em>111</em>
+      <strong>2222</strong>
+      <p>3333</p>
+
+      <!-- 1.7 字体样式 -->
+
+      <!-- <div class="font">举个例子</div> -->
+      <div class="font"></div>
+
+
+ </body>
+
+</html>

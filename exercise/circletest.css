@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+ 
+}
+.circle{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    height: 280px;
+    background-color: pink;
+    margin-left: -250px;
+    margin-top: -140px;
+
+}
+.blue{
+    position: relative;
+    left: 50px;
+    top: 50px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid blue;
+    border-radius: 50%;
+    z-index: 1; 
+}
+.black{
+    position: absolute;
+    left: 130px;
+    top: -10px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid black;
+    border-radius: 50%;
+    z-index: 1; 
+}
+.red{
+    position: absolute;
+    left:130px;
+    top:-10px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid red;
+    border-radius: 50%;
+    z-index: 1; 
+}
+.yellow{
+    position: absolute;
+    top:50px;
+    left:-220px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid yellow;
+    border-radius: 50%;
+    z-index: 2; 
+}
+.green{
+    position: absolute;
+    top:-10px;
+    left:130px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid green;
+    border-radius: 50%;
+    z-index: 2; 
+}

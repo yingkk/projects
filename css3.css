@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 8. 文字对齐 vertical-align*/
+
+.test-text{
+    font-size: 50px;
+}
+.test-span{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+    background-color: coral;
+    font-size: 30px;
+
+    /* 设置对齐方式 */
+    /* vertical-align: -15px; */
+}
+
+
+
+
+/* 7. 行级元素转为行级块元素*/
+.test-span{
+    /* position: absolute; */
+    /* float: left; */
+    /* 等价于  display: inline-block;*/
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+}
+
+
+
+
+
+/* 6. 文本类属性标签空隙*/
+.inline-block{
+    width: 100px;
+    margin-left: -6px;
+}
+
+
+/* 5.网页两边留白 */
+.wrapper{
+    height: 30px;
+    background-color: blueviolet;
+}
+.content{
+    margin: 0 auto;
+    width: 800px;
+    height: 30px;
+    background-color: brown;
+}
+
+
+/* 4.特殊点 */
+
+/* 3. 图片代替文字 3.1第一种方法*/
+.taobao1{
+    display: inline-block;
+    width: 150px;
+    height: 60px;
+    text-decoration: none;
+    border: 1px solid black;
+    background-image: url(https://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png);
+    background-repeat: no-repeat;
+    background-size: 150px 60px;
+    color: #f40;
+
+    text-indent: 192px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.taobao2{
+    display: inline-block;
+    width: 150px;
+    height: 0px;
+    padding-top: 60px;
+    margin-left: 20px;
+    text-decoration: none;
+    border: 1px solid black;
+    background-image: url(https://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png);
+    background-repeat: no-repeat;
+    background-size: 150px 60px;
+    color: #f40;
+    overflow: hidden;
+}
+
+
+
+/* 2.背景图片 */
+.bg-img{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background-image: url(test.png);
+    background-size: 100px 200px;
+    background-repeat: no-repeat; /* 不重复铺 */
+    /*  */
+    /* background-position: 100px 100px; */
+    /* background-position: left top; */
+    /* background-position: left center; */
+    /* background-position: top center; */
+    /* background-position: center center;
+        等价于
+       background-position: 50% 50%;
+    */
+    background-position: 50% 50%;
+}
+
+/* 1.文字溢出 */
+.one-line{
+    width: 300px;
+    height: 40px;
+    line-height: 20px;  /* 行高 */
+    border: 1px solid black;
+
+    overflow: hidden;  /* 前提是要算好行高，避免字体横向截断 */
+
+    /* 单行文字溢出三件套 */
+    /* white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;      */
+}

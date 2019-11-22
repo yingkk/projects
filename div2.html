@@ -1,0 +1,219 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+         <title>两栏布局 2个BUG BFC 浮动模型 包裹浮动元素</title>
+         <link rel="stylesheet" type="text/css" href="div2.css">
+    </head>
+    <body>
+       <!-- 
+           6.应用场景：
+            6.1 报纸布局：文字环绕图片
+            6.2 导航栏
+        -->
+
+       <ul class="nav">
+           <li class="list-item">
+               <a href="#">天猫</a>
+           </li>
+           <li class="list-item">
+                <a href="#">聚划算</a>
+            </li>
+           <li class="list-item">
+                <a href="#">天猫超市</a>
+            </li>
+       </ul>
+
+        <br><br><br><br><br><br>
+
+
+       <img src="test.png" alt="报纸布局" class="img1">图片写真 , 高人气女人 , 超低折扣限量抢 , 千万用户真实评价 , 高人气个性写真 , 一键获取报价 , 预定立享福利 , 结婚上下游全产业链服务 , 婚宴档期 , 婚纱摄影 , 婚礼.
+       , 超低折扣限量抢 , 千万用户真实评价 , 高人气个性写真 , 一键获取报价 , 预定立享福利 , 结婚上下游全产业链服务 , 婚宴档期 , 婚纱摄影 , 婚礼.
+       图片写真 , 高人气女人 , 超低折扣限量抢 , 千万用户真实评价 , 高人气个性写真 , 一键获取报价 , 预定立享福利 , 结婚上下游全产业链服务 , 婚宴档期 , 婚纱摄影 , 婚礼.
+       , 超低折扣限量抢 , 千万用户真实评价 , 高人气个性写真 , 一键获取报价 , 预定立享福利 , 结婚上下游全产业链服务 , 婚宴档期 , 婚纱摄影 , 婚礼.
+       图片写真 , 高人气女人 , 超低折扣限量抢 , 千万用户真实评价 , 高人气个性写真 , 一键获取报价 ,<img src="test.png" alt="报纸布局2" class="img2"> 预定立享福利 , 结婚上下游全产业链服务 , 婚宴档期 , 婚纱摄影 , 婚礼.
+       , 超低折扣限量抢 , 千万用户真实评价 , 高人气个性写真 , 一键获取报价 , 预定立享福利 , 结婚上下游全产业链服务 , 婚宴档期 , 婚纱摄影 , 婚礼.
+       图片写真 , 高人气女人 , <img src="test.png" alt="报纸布局" class="img1">超低折扣限量抢 , 千万用户真实评价 , 高人气个性写真 , 一键获取报价 , 预定立享福利 , 结婚上下游全产业链服务 , 婚宴档期 , 婚纱摄影 , 婚礼.
+       , 超低折扣限量抢 , 千万用户真实评价 , 高人气个性写真 , 一键获取报价 , 预定立享福利 , 结婚上下游全产业链服务 , 婚宴档期 , 婚纱摄影 , 婚礼.<img src="test.png" alt="报纸布局2" class="img2">
+
+       <br><br><br><br><br><br><br><br><br><br>
+        <!-- 
+            5.清除浮动 ：必须是【块级元素】
+            clear:left/right/both  //清除块级元素周边的浮动流
+            父级元素包住子级浮动元素的解决方法：
+              1.设置一个p元素去清除浮动；(破坏页面结构 不采用)
+              2.利用父级伪元素清除浮动,(清除浮动必须是块级元素)
+              3.父级元素设置position：absolute 或 float:left/right。
+              
+              注：凡是设置了position:absolute 或 float:left/right的元素，
+                 会从内部把元素变成了inline-block元素，即宽高会由内容来决定。
+         -->
+         
+         <div class="box">
+            <div class="childbox">1</div>
+            <div class="childbox">2</div>
+            <div class="childbox">3</div>
+            <div class="childbox">4</div>
+            <div class="childbox">5</div>
+            <div class="childbox">6</div>
+            <div class="childbox">7</div>
+         </div>
+
+
+        <br><br><br><br><br><br><br><br><br><br>
+         <!-- 
+            4-5. 伪元素：可以当做元素来操作，但是在html里没有自己的结构
+            默认是inline 即行级元素。设置宽高必须变成块级元素。
+            元素::before{
+                   content:""    //必需有content伪元素才生效
+            }
+            元素::after{
+                   content:""   //必需有content伪元素才生效
+            }
+
+          -->
+          <span class="span">张三</span>
+
+          <br><br><br><br><br><br><br> <br><br><br><br><br><br><br>
+        <!-- 
+            4.浮动模型 
+
+            （类似汉字书写顺序）书写边界为不够一个则换行
+            float:left   //从左往右写
+            float:right  //从右往左写
+
+            注：浮动的效果看似与position：absolute效果相同，但实则是：
+               a.浮动元素产生了浮动流，对所有产生了浮动流的元素：
+                 1. 块级元素看不到浮动元素；
+                 2. 产生了BFC的元素和文本类属性元素(带有inline属性的元素)以及文本都能看到浮动元素。
+               b.position:absolute 是产生了分层。
+        -->
+
+        <div class="father">
+            <div class="child">1</div>
+            <div class="child">2</div>
+            <div class="child">3</div>
+            <div class="child">4</div>
+            <div class="child">5</div>
+            <div class="child">6</div>
+            <div class="child">7</div>
+            <div class="child">8</div>
+            <div class="child">9</div>
+
+           <p class="testp"></p>
+        </div>
+
+
+
+
+
+
+
+
+
+        <br><br><br><br><br><br><br> <br><br><br><br><br><br><br>
+         <!-- 
+            3.margin合并: 
+              兄弟元素垂直方向的margin是合并的 ， 并且会取最大值。 
+              解决方法：
+              3.1.bfc 需要添加html结构 （不采用，影响结构）
+              3.2.加margin-top的值               
+                 注：margin合并是允许存在的，按要求多加像素即可。
+                 
+         -->
+
+        <div class="div3">11</div>
+        <div class="div4">22</div> 
+
+        <br><br><br><br><br><br><br>
+        <!--
+             当两个兄弟盒子元素分别设置了margin-bootom 和 margin-top之后，发现两个div的垂直间距还是40px;
+             当设置margin-bootom为60px时，两个兄弟div之间的间距是60px;
+        -->
+
+        <div class="warpper">
+                <div class="div3">33</div>
+        </div>
+        <div class="div4">44</div>
+        <br><br><br><br><br><br><br>
+        <!-- 兄弟盒子元素，margin合并：方法一：给其中一个设置bfc ,此方法改变了结构，故不可取-->
+        
+
+        <div class="div3">55</div>
+        <div class="div4">66</div> 
+        <!--  兄弟盒子元素，margin合并：方法二：增加像素-->
+
+
+
+
+
+
+        <br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br>
+         <!-- 
+             2.margin塌陷：子级元素对父级元素垂直方向，父级没有"顶"。（相当于子级垂直方向没有一个相对的参考）。
+
+              父子嵌套的元素，垂直方向的margin(margin-top),父子元素是结合到一起的，并且会取最大的值。
+
+              弥补margin塌陷的方法：  
+              2.1.border-top:1px solid red;  //给父级加个顶  (此方法太low,不专业)
+              2.2.bfc(block format context块级格式化上下文)
+                 作用：因为每个盒子的渲染规则不一样，触发bfc后，来修改特定盒子的渲染(语法)规则。
+                 2.2.1 如何触发一个盒子的bfc：
+                       position:absolute       //盒子正常显示,元素会脱离文档流
+                       display:inline-block    //盒子正常显示
+                       float:left/right        //盒子正常显示,元素会脱离文档流
+                       overflow:hidden         //溢出盒子的部分隐藏(修改父级的渲染规则)
+            
+                 2.2.2 总结：父级加css
+        --> 
+
+          <div class="div1">
+                <div class="div2"></div>
+          </div>
+          <!-- 
+                父级分别设置margin-top会margin-left后，带着子级元素移动;
+                在设置子级的margin-left 会相对于父级的左边框移动50px;
+                在设置子级的margin-top 分别为50px 100px时 都不动；设置为150px时，会带着父级距离父级上边框移动150px;
+         
+                解决：设置父级的bfc,修改父级渲染
+         
+         
+            -->
+         
+          <br><br><br><br>
+          <span class="span1">qqq</span>
+          <span class="span2">ssss</span>
+          <!-- 
+              可以看到两个span中间有缝隙，原因是因为是行级元素有文本属性 
+              当先后分别加了margin-right和margin-left后，发现两者水平间距为200px,即累加的。
+              这是正常的显示，因为盒子元素各自区域不能共用。
+          -->
+
+
+
+
+            
+       
+
+
+
+
+
+
+
+
+
+        <br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- 
+            1.两栏布局 
+             先写right定位布局，生成后，再margin-right让出来位置，absolute定位 
+             如果先写left ，即先生成left盒子，right则会到下一行，这时候absolute定位不会窜到上一行。
+        -->
+        <div class="left"></div>
+        <div class="right"></div>
+        <!-- <div class="left"></div> -->
+        
+
+       
+        
+    </body>
+</html>

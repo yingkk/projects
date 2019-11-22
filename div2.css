@@ -1,0 +1,191 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #424242;
+    font-family: Arial;
+}
+a{
+    text-decoration: none;
+}
+/* 6.应用场景 导航栏 */
+
+.nav::after{
+    content: "";
+    clear: both;
+}
+.nav{
+   /* 先屏蔽通配符选择器再练习 */
+   list-style: none;
+}
+.nav .list-item{
+    float: left;
+    margin: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    /* border:1px solid black;     */
+}
+.nav .list-item a{
+    color: #f40;
+    font-weight: bold;
+    display: inline-block;
+    height: 30px;
+    padding: 0 5px;
+    border-radius: 15px;
+}
+
+.nav .list-item a:hover{
+    background-color: #f40;
+    color: #fff;
+}
+
+
+/* 6.应用场景 报纸布局*/
+.img1{
+    float: left;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+}
+.img2{
+    float: right;
+    width: 100px;
+    margin-left: 10px;
+}
+
+
+/* 5.伪元素清除浮动 */
+.box{
+    /* position: absolute; */
+    /* float: left; */
+    border: 2px solid black;
+}
+.box::after{
+    content:"";
+    clear: both;
+    display: block;
+}
+.childbox{
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}
+
+
+/* 4-5伪元素 */
+.span::before{
+    /* position: absolute; */
+    content:"我是span标签，";
+    /* display: inline-block; */
+    width: 100px;
+    height: 100px;
+    background-color:blue;
+
+}
+.span::after{
+    content:"，不是inline的";
+}
+
+/* 4.浮动模型 */
+
+.father{
+    width: 170px;
+    height: 170px;
+    border: 1px solid black;
+}
+.child{
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: darkred;
+    margin-left: 5px;
+    margin-top: 5px;
+    /* opacity: 0.5; */
+}
+.testp{
+    clear: both;
+    border: 0 solid black;
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 3.margin合并 */
+.div3{
+    height: 60px;
+    background-color: darkgreen;
+    margin-bottom: 40px;
+}
+.div4{
+    height: 60px;
+    background-color: darkolivegreen;
+    margin-top: 80px;
+}
+
+/* 兄弟盒子元素，margin合并：方法一：bfc */
+/* .warpper{
+    overflow: hidden;
+} */
+
+
+
+
+
+
+
+/* 2.margin塌陷 */
+ .span1{
+     background-color: red;
+     margin-right: 100px;
+ }
+ .span2{
+     background-color: blue;
+     margin-left: 100px;
+ }
+ .div1{
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: darkblue;
+    /* overflow: hidden; */
+    /* position: absolute; */
+    /* display: inline-block; */
+    float: left;
+}
+ .div2{
+    margin-left: 50px;
+    margin-top: 60px;      /* 当大于父级的margin-top会带着父级一起向下 */
+    width: 50px;
+    height: 50px;
+    background-color: darkgoldenrod;
+}
+
+
+
+
+/* 1.两栏布局 */
+.right{
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    /* opacity: 0.5; */
+    /* top: 0; */
+}
+.left{
+    width: 50px;
+    margin-right: 100px;
+    height: 100px;
+    background-color: black;
+    /* box-sizing: border-box; */
+}
